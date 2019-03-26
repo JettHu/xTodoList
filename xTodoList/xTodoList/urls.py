@@ -1,3 +1,4 @@
+# coding=utf-8
 """xTodoList URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -20,6 +21,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^qwerty/', include(admin.site.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # TODO 账号权限
+    # url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^', include("todolist.urls")),
 ]

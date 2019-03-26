@@ -1,9 +1,9 @@
 # coding=utf-8
-from models import Task
+from .models import Task
+from .serializers import TaskSerializer, UserSerializer
+from .permissions import IsOwnerOrReadOnly
 from django.contrib.auth.models import User
-from serializers import TaskSerializer, UserSerializer
 from rest_framework import generics, permissions
-from permissions import IsOwnerOrReadOnly
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.decorators import api_view
@@ -23,7 +23,8 @@ class TaskList(generics.ListCreateAPIView):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    # TODO 账号权限
+    # permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -35,7 +36,8 @@ class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
+    # TODO 账号权限
+    # permission_classes = (permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly)
 
 
 class UserList(generics.ListAPIView):

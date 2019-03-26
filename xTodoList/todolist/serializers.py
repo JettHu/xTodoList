@@ -1,6 +1,6 @@
 # coding=utf-8
 from rest_framework import serializers
-from models import Task
+from .models import Task
 from django.contrib.auth.models import User
 
 
@@ -9,7 +9,8 @@ class TaskSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Task
-        fields = ('url', 'id', 'todo', 'done', 'desc', 'priority', 'expire', 'expire_date', 'add_time', 'modify_time', 'owner')
+        fields = ('url', 'id', 'todo', 'done', 'desc', 'priority',
+                  'expire', 'expire_date', 'add_time', 'modify_time', 'owner')
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
