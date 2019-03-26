@@ -11,5 +11,3 @@ A todo list WebAPP
 - [ ] 待办事项可以设置优先级
 - [ ] 待办事项可以设置expire date
 - [ ] 支持按照不同的方式排序，如优先级，expire date
-
-## 前端
