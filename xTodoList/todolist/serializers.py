@@ -5,12 +5,12 @@ from django.contrib.auth.models import User
 
 
 class TaskSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
+    # owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Task
         fields = ('url', 'id', 'todo', 'done', 'desc', 'priority',
-                  'expire', 'expire_date', 'add_time', 'modify_time', 'owner')
+                  'expire', 'expire_date', 'add_time', 'modify_time')
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

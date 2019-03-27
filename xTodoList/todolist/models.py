@@ -27,7 +27,7 @@ class Task(models.Model):
     expire_date = models.DateTimeField(null=True, blank=True)
     add_time = models.DateTimeField(auto_now_add=True)
     modify_time = models.DateTimeField(auto_now=True)
-    owner = models.ForeignKey('auth.User', related_name='tasks', on_delete=models.CASCADE)
+    # owner = models.ForeignKey('auth.User', related_name='tasks', on_delete=models.CASCADE)
 
     def __str__(self):
         return self.todo
