@@ -9,4 +9,4 @@ A todo list WebAPP
 - [x] PUT,PATCH
 
 ## 截图
-![image](https://github.com/JettHu/xTodoList/raw/screenshot.gif)
+![image](https://github.com/JettHu/xTodoList/raw/Master/screenshot.gif)
