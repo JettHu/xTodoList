@@ -34,4 +34,4 @@ class Task(models.Model):
 
     class Meta:
         # 按是否完成、优先级以及创建时间排序
-        ordering = ('done', 'priority', 'add_time')
+        ordering = ('done', '-priority', 'add_time')
