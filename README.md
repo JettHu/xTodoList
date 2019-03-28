@@ -1,13 +1,12 @@
 # xTodoList
 A todo list WebAPP
 
-## 目标功能
-- [ ] 增加一个待办事项
-- [ ] 删除一个待办事项
-- [ ] 标记一个待办事项为已完成
-- [ ] 编辑一个待办事项的具体内容
-- [ ] 列出所有的待办事项
----
-- [ ] 待办事项可以设置优先级
-- [ ] 待办事项可以设置expire date
-- [ ] 支持按照不同的方式排序，如优先级，expire date
+> Django完成的RESTful后端
+
+## 功能
+- [x] GET
+- [x] POST
+- [x] PUT,PATCH
+
+## 截图
+![image](https://github.com/JettHu/xTodoList/raw/screenshot.gif)
